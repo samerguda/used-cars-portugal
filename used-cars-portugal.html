@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Used Car Buying Guide</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        .button {
+            margin: 5px;
+            padding: 10px 15px;
+            border: none;
+            background-color: #007BFF;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+        .dark-mode {
+            background-color: #333;
+            color: white;
+        }
+        .dark-mode th {
+            background-color: #555;
+        }
+        .dark-mode .button {
+            background-color: #444;
+        }
+        .dark-mode .button:hover {
+            background-color: #222;
+        }
+    </style>
+</head>
+<body>
+
+<button class="button" onclick="copyContent()">Copy Content</button>
+<button class="button" onclick="printCurrentTime()">Print Current Time</button>
+<button class="button" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+
+<p id="currentTime"></p>
+
+<h2>Used-cars-portugal</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>English</th>
+            <th>Arabic</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                <h3>Websites:</h3>
+                <ul>
+                    <li><a href="https://www.standvirtual.com/">Standvirtual</a></li>
+                    <li><a href="https://www.olx.pt/carros-motos-e-barcos/carros/">OLX Portugal</a></li>
+                    <li><a href="https://www.custojusto.pt/carros/">CustoJusto</a></li>
+                    <li><a href="https://autosapo.pt/">Auto Sapo</a></li>
+                </ul>
+                <h3>Applications:</h3>
+                <ul>
+                    <li><a href="https://apps.apple.com/pt/app/standvirtual-carros-motos/id324618583">Standvirtual iOS</a>, <a href="https://play.google.com/store/apps/details?id=com.fixeads.standvirtual&hl=en&gl=US">Standvirtual Android</a></li>
+                    <li><a href="https://apps.apple.com/pt/app/olx/id397475345">OLX Portugal iOS</a>, <a href="https://play.google.com/store/apps/details?id=pt.olx&hl=en&gl=US">OLX Portugal Android</a></li>
+                    <li><a href="https://apps.apple.com/pt/app/custojusto-pt-classificados/id534451738">CustoJusto iOS</a>, <a href="https://play.google.com/store/apps/details?id=com.custojusto.android&hl=en&gl=US">CustoJusto Android</a></li>
+                </ul>
+                <h3>Tips:</h3>
+                <ul>
+                    <li>Check the Car's History</li>
+                    <li>Verify Documents</li>
+                    <li>Inspection</li>
+                    <li>Negotiate</li>
+                </ul>
+            </td>
+            <td>
+                <h3>المواقع:</h3>
+                <ul>
+                    <li><a href="https://www.standvirtual.com/">Standvirtual</a></li>
+                    <li><a href="https://www.olx.pt/carros-motos-e-barcos/carros/">OLX Portugal</a></li>
+                    <li><a href="https://www.custojusto.pt/carros/">CustoJusto</a></li>
+                    <li><a href="https://autosapo.pt/">Auto Sapo</a></li>
+                </ul>
+                <h3>التطبيقات:</h3>
+                <ul>
+                    <li><a href="https://apps.apple.com/pt/app/standvirtual-carros-motos/id324618583">Standvirtual iOS</a>, <a href="https://play.google.com/store/apps/details?id=com.fixeads.standvirtual&hl=en&gl=US">Standvirtual Android</a></li>
+                    <li><a href="https://apps.apple.com/pt/app/olx/id397475345">OLX Portugal iOS</a>, <a href="https://play.google.com/store/apps/details?id=pt.olx&hl=en&gl=US">OLX Portugal Android</a></li>
+                    <li><a href="https://apps.apple.com/pt/app/custojusto-pt-classificados/id534451738">CustoJusto iOS</a>, <a href="https://play.google.com/store/apps/details?id=com.custojusto.android&hl=en&gl=US">CustoJusto Android</a></li>
+                </ul>
+                <h3>نصائح:</h3>
+                <ul>
+                    <li>تحقق من تاريخ السيارة</li>
+                    <li>تحقق من المستندات</li>
+                    <li>الفحص</li>
+                    <li>التفاوض</li>
+                </ul>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<script>
+    function copyContent() {
+        const content = document.querySelector('table').outerHTML;
+        navigator.clipboard.writeText(content).then(() => {
+            alert('Content copied to clipboard');
+        }).catch(err => {
+            alert('Failed to copy content');
+        });
+    }
+
+    function printCurrentTime() {
+        const now = new Date();
+        document.getElementById('currentTime').innerText = 'Current Time: ' + now.toLocaleString();
+    }
+
+    function toggleDarkMode() {
+        document.body.classList.toggle('dark-mode');
+    }
+</script>
+
+</body>
+</html>
